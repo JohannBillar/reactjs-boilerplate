@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1476375251565" clover="3.2.0">
+  <project timestamp="1476375251565" name="All files">
+    <metrics statements="10" coveredstatements="0" conditionals="35" coveredconditionals="0" methods="10" coveredmethods="0" elements="55" coveredelements="0" complexity="0" loc="10" ncloc="10" packages="2" files="3" classes="3">
+      <package name="components">
+        <metrics statements="8" coveredstatements="0" conditionals="35" coveredconditionals="0" methods="9" coveredmethods="0"/>
+        <file name="App.jsx" path="/Users/johannbillar/Sites/React/reactjs-boilerplate/app/components/App.jsx">
+          <metrics statements="4" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+        </file>
+        <file name="Link.jsx" path="/Users/johannbillar/Sites/React/reactjs-boilerplate/app/components/Link.jsx">
+          <metrics statements="4" coveredstatements="0" conditionals="31" coveredconditionals="0" methods="7" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+          <line num="47" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="utils">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <file name="sum.js" path="/Users/johannbillar/Sites/React/reactjs-boilerplate/app/utils/sum.js">
+          <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

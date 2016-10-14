@@ -1,0 +1,5 @@
+exports[`Welcome (Snapshot) Welcome renders Hello World 1`] = `
+<div>
+  Hello World
+</div>
+`;
