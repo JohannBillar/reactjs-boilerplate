@@ -4,7 +4,21 @@
 * Webpack
 * Babel 6
 * ESLint (extended with airbnb)
-* Jest
+
+* Mocha/Chai/Enzyme testing
+    * devDependencies:
+        $ npm i -D 
+        - mocha
+        - chai
+        - enzyme
+        - jsdom
+        - babel-register 
+        - babel-polyfill
+        General testing setup:
+        mkdir test and a subdir called helpers with setup.js
+        JSX/ES6 transpilation or tests will crash on unfamiliar syntax
+        JSDOM - Fake dom for React to interact with
+    
 * SASS
 * Much more
 
