@@ -4,7 +4,8 @@
   "description": "Quick React starter boilerplate.",
   "main": "index.js",
   "scripts": {
-    "test": "jest ",
+    "test": "jest --coverage",
+    "watch:test": "jest --watch",
     "lint": "eslint app",
     "start": "webpack-dev-server --progress --colors --watch"
   },
@@ -46,6 +47,21 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "app/components/*.jsx",
+      "app/containers/*.jsx",
+      "app/utils/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
   },
   "repository": {
     "type": "git",
