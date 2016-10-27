@@ -32,6 +32,10 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
+        test: /\.(png|jpg|jpeg|gif)$/,
+        loader: 'url-loader?limit=20000&name=images/[name].[ext]'
+      },
+      {
         test: /\.scss$/,
         loader: 'style-loader!css-loader!sass-loader'
       }
