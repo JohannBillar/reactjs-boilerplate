@@ -1,14 +1,14 @@
 # ReactJS Project Boilerplate
-## Repo created to get a quick started with my Reactprojects
-
+## Repo created to quickly setup my React projects.
  
 ### Quick start a project with:
-* Webpack with dev-server
+* Webpack and webpack-dev-server
 * Babel 6
 * ESLint (extended with airbnb)
 * Jest
 * SASS
 * Express
+* React-Router
 * Much more coming...
 
 ___
@@ -20,4 +20,6 @@ $ npm start or $ NODE_ENV=production npm start
 ```
 ___
 ### TODO
-Create production automation for deployment
+Setup testing unit testing examples
+Build out server
+Use webpack API settings instead of scripts
