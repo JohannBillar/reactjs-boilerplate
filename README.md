@@ -20,6 +20,6 @@ $ npm start or $ NODE_ENV=production npm start
 ```
 ___
 ### TODO
-Setup testing unit testing examples
-Build out server
-Use webpack API settings instead of scripts
+- Setup testing unit testing examples
+- Build out server
+- Use webpack API settings instead of scripts
