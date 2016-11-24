@@ -14,6 +14,12 @@
 ___
 ### Usage:
 ```sh
+$ ~/mkdir my-react-app
+$ cd my-react-app
+$ git clone --bare https://github.com/JohannBillar/reactjs-boilerplate.git .git
+$ git config --bool core.bare false
+$ git reset --hard
+
 $ npm install
 $ npm test
 $ npm start or $ NODE_ENV=production npm start
