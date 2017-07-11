@@ -1,8 +1,10 @@
-# ReactJS Project Boilerplate
+# ReactJS Project Boilerplate v2
 ## Repo created to quickly setup my React projects.
+## Inspired by Complete Intro to React, v3
  
 ### Quick start a project with:
-* Webpack and webpack-dev-server
+* Prettier
+* Webpack2 and webpack-dev-server
 * Babel 6
 * ESLint (extended with airbnb)
 * Jest
