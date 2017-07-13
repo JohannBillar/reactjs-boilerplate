@@ -4,7 +4,4 @@ import App from './components/App';
 
 require('./sass/main.scss');
 
-render(
-  <App message="Hello, world!" />,
-  document.getElementById('app')
-);
+render(<App message="Hello, world!" />, document.getElementById('root'));
