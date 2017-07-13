@@ -43,30 +43,6 @@ module.exports = {
       }
     ]
   },
-  // module: {
-  //   preLoaders: [
-  //     {
-  //       test: /\.jsx?$/,
-  //       exclude: /node_modules/,
-  //       loader: 'eslint-loader'
-  //     }
-  //   ],
-  //   loaders: [
-  //     {
-  //       test: /\.jsx?$/,
-  //       exclude: /node_modules/,
-  //       loader: 'babel-loader'
-  //     },
-  //     {
-  //       test: /\.(png|jpg|jpeg|gif)$/,
-  //       loader: 'url-loader?limit=20000&name=images/[name].[ext]'
-  //     },
-  //     {
-  //       test: /\.scss$/,
-  //       loader: 'style-loader!css-loader!sass-loader'
-  //     }
-  //   ]
-  // },
   plugins:
     process.env.NODE_ENV === 'production'
       ? [
