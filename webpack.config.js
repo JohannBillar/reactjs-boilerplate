@@ -1,9 +1,9 @@
 const path = require('path');
-var webpack = require('webpack');
+const webpack = require('webpack');
 
 module.exports = {
   context: __dirname,
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   devtool: 'cheap-eval-source-map',
   output: {
     path: path.join(__dirname, '/public'),
