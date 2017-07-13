@@ -4,14 +4,13 @@
  
 ### Quick start a project with:
 * Prettier
+* ESLint (extended with airbnb)
 * Webpack2 and webpack-dev-server
 * Babel 6
-* ESLint (extended with airbnb)
-* Jest
+* Jest/Enzyme
 * SASS
 * Express
 * React-Router
-* Much more coming...
 
 ___
 ### Usage:
@@ -22,9 +21,9 @@ $ git clone --bare https://github.com/JohannBillar/reactjs-boilerplate.git .git
 $ git config --bool core.bare false
 $ git reset --hard
 
-$ npm install
-$ npm test
-$ npm start or $ NODE_ENV=production npm start
+$ yarn
+$ yarn test
+$ yarn start or $ NODE_ENV=production npm start
 ```
 ___
 ### TODO
