@@ -22,8 +22,9 @@ $ git config --bool core.bare false
 $ git reset --hard
 
 $ yarn
+$ $ yarn start or $ NODE_ENV=production npm start
 $ yarn test
-$ yarn start or $ NODE_ENV=production npm start
+
 ```
 ___
 ### TODO

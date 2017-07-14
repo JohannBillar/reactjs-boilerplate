@@ -10,7 +10,7 @@ function App({ message }) {
 }
 
 App.propTypes = {
-  message: PropTypes.string
+  message: PropTypes.string.isRequired
 };
 
 export default App;

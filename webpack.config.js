@@ -3,15 +3,22 @@ const webpack = require('webpack');
 
 module.exports = {
   context: __dirname,
-  entry: './src/index.jsx',
+  entry: [
+    'react-hot-loader/patch',
+    'webpack-dev-server/client?http://localhost:8080',
+    'webpack/hot/only-dev-server',
+    './src/index.jsx'
+  ],
   devtool: 'cheap-eval-source-map',
   output: {
-    path: path.join(__dirname, '/public'),
-    filename: 'bundle.js'
-    // publicPath: '/'
+    path: path.join(__dirname, 'public'),
+    filename: 'bundle.js',
+    publicPath: '/public/'
   },
   devServer: {
-    contentBase: './public'
+    hot: true,
+    publicPath: '/public/',
+    historyApiFallback: true
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json']
@@ -55,5 +62,5 @@ module.exports = {
           }),
           new webpack.optimize.UglifyJsPlugin()
         ]
-      : []
+      : [new webpack.HotModuleReplacementPlugin(), new webpack.NamedModulesPlugin()]
 };
