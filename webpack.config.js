@@ -1,18 +1,27 @@
 const path = require('path');
-var webpack = require('webpack');
+const webpack = require('webpack');
 
 module.exports = {
   context: __dirname,
   entry: [
-    './app/index.js'
+    'react-hot-loader/patch',
+    'webpack-dev-server/client?http://localhost:8080',
+    'webpack/hot/only-dev-server',
+    './src/index.jsx'
   ],
+  devtool: 'cheap-eval-source-map',
   output: {
-    path: path.join(__dirname, '/public'),
+    path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: '/public/'
+  },
+  devServer: {
+    hot: true,
+    publicPath: '/public/',
+    historyApiFallback: true
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx', '.json']
   },
   stats: {
     color: true,
@@ -20,17 +29,15 @@ module.exports = {
     chunks: false
   },
   module: {
-    preLoaders: [
+    rules: [
+      {
+        enforce: 'pre',
+        test: /\.jsx?$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/
+      },
       {
         test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader'
-      }
-    ],
-    loaders: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
         loader: 'babel-loader'
       },
       {
@@ -41,19 +48,19 @@ module.exports = {
         test: /\.scss$/,
         loader: 'style-loader!css-loader!sass-loader'
       }
-    ],
+    ]
   },
-  devServer: {
-    contentBase: './public'
-  },
-  plugins: process.env.NODE_ENV === 'production' ? [
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin(),
-  ] : [],
+  plugins:
+    process.env.NODE_ENV === 'production'
+      ? [
+          new webpack.optimize.DedupePlugin(),
+          new webpack.optimize.OccurrenceOrderPlugin(),
+          new webpack.DefinePlugin({
+            'process.env': {
+              NODE_ENV: JSON.stringify('production')
+            }
+          }),
+          new webpack.optimize.UglifyJsPlugin()
+        ]
+      : [new webpack.HotModuleReplacementPlugin(), new webpack.NamedModulesPlugin()]
 };

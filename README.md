@@ -1,15 +1,16 @@
-# ReactJS Project Boilerplate
+# ReactJS Project Boilerplate v2
 ## Repo created to quickly setup my React projects.
+## Inspired by Complete Intro to React, v3
  
 ### Quick start a project with:
-* Webpack and webpack-dev-server
-* Babel 6
+* Prettier
 * ESLint (extended with airbnb)
-* Jest
+* Webpack2 and webpack-dev-server
+* Babel 6
+* Jest/Enzyme
 * SASS
 * Express
 * React-Router
-* Much more coming...
 
 ___
 ### Usage:
@@ -20,9 +21,10 @@ $ git clone --bare https://github.com/JohannBillar/reactjs-boilerplate.git .git
 $ git config --bool core.bare false
 $ git reset --hard
 
-$ npm install
-$ npm test
-$ npm start or $ NODE_ENV=production npm start
+$ yarn
+$ $ yarn start or $ NODE_ENV=production npm start
+$ yarn test
+
 ```
 ___
 ### TODO
